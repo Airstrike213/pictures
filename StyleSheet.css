@@ -979,10 +979,6 @@ a {
     padding: 0 8px
 }
 
-.w3-container,.w3-panel {
-    padding: 0.01em 16px
-}
-
 .w3-panel {
     margin-top: 16px;
     margin-bottom: 16px
@@ -1320,7 +1316,6 @@ a {
 
 .w3-padding-16 {
     padding-top: 16px!important;
-    padding-bottom: 16px!important
 }
 
 .w3-padding-24 {
