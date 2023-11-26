@@ -26,14 +26,20 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           document.getElementById("myOverlay").style.display = "none";
         }
         
-        // Modal Image Gallery
         function onClick(element) {
-          document.getElementById("img01").src = element.src;
-          document.getElementById("modal01").style.display = "block";
-          var captionText = document.getElementById("caption");
-          captionText.innerHTML = element.alt;
-        }
-        
+        var modal = document.getElementById("modal01");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImg.src = element.src;
+        captionText.innerHTML = element.alt;
+
+        // Close the modal when clicking outside the image
+        modal.onclick = function () {
+            modal.style.display = "none";
+        };
+    }
         </script>
         
     <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
