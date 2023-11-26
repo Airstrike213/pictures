@@ -41,6 +41,23 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         };
     }
 </script>
+
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+    <span class="w3-left w3-padding">Ronjas Und Kelvins Hochzeitsseite</span>
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Schließen</a> 
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Startseite</a>
+        <a href="portfolio1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 1</a>
+        <a href="portfolio2.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 2</a>
+        <a href="portfolio3.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Hochkant Gruppen Fotos</a>
+        <a href="portfolio4.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">xxxx</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-row w3-grayscale-min">
   
   <div class="w3-row ">
     <div class="w3-quarter">
@@ -89,104 +106,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <img src="Gruppen/G-23.jpg" style="width:100%" onclick="onClick(this)" alt="Image 23">
         <img src="Gruppen/G-24.jpg" style="width:100%" onclick="onClick(this)" alt="Image 24">
     </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-25.jpg" style="width:100%" onclick="onClick(this)" alt="Image 25">
-        <img src="Gruppen/G-26.jpg" style="width:100%" onclick="onClick(this)" alt="Image 26">
-        <img src="Gruppen/G-27.jpg" style="width:100%" onclick="onClick(this)" alt="Image 27">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-28.jpg" style="width:100%" onclick="onClick(this)" alt="Image 28">
-        <img src="Gruppen/G-29.jpg" style="width:100%" onclick="onClick(this)" alt="Image 29">
-        <img src="Gruppen/G-77.jpg" style="width:100%" onclick="onClick(this)" alt="Image 30">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-76.jpg" style="width:100%" onclick="onClick(this)" alt="Image 31">
-        <img src="Gruppen/G-75.jpg" style="width:100%" onclick="onClick(this)" alt="Image 32">
-        <img src="Gruppen/G-73.jpg" style="width:100%" onclick="onClick(this)" alt="Image 33">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-68.jpg" style="width:100%" onclick="onClick(this)" alt="Image 34">
-        <img src="Gruppen/G-63.jpg" style="width:100%" onclick="onClick(this)" alt="Image 35">
-        <img src="Gruppen/G-36.jpg" style="width:100%" onclick="onClick(this)" alt="Image 36">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-37.jpg" style="width:100%" onclick="onClick(this)" alt="Image 37">
-        <img src="Gruppen/G-38.jpg" style="width:100%" onclick="onClick(this)" alt="Image 38">
-        <img src="Gruppen/G-39.jpg" style="width:100%" onclick="onClick(this)" alt="Image 39">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-40.jpg" style="width:100%" onclick="onClick(this)" alt="Image 40">
-        <img src="Gruppen/G-41.jpg" style="width:100%" onclick="onClick(this)" alt="Image 41">
-        <img src="Gruppen/G-62.jpg" style="width:100%" onclick="onClick(this)" alt="Image 42">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-61.jpg" style="width:100%" onclick="onClick(this)" alt="Image 43">
-        <img src="Gruppen/G-44.jpg" style="width:100%" onclick="onClick(this)" alt="Image 44">
-        <img src="Gruppen/G-45.jpg" style="width:100%" onclick="onClick(this)" alt="Image 45">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-46.jpg" style="width:100%" onclick="onClick(this)" alt="Image 46">
-        <img src="Gruppen/G-60.jpg" style="width:100%" onclick="onClick(this)" alt="Image 47">
-        <img src="Gruppen/G-48.jpg" style="width:100%" onclick="onClick(this)" alt="Image 48">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-49.jpg" style="width:100%" onclick="onClick(this)" alt="Image 49">
-        <img src="Gruppen/G-50.jpg" style="width:100%" onclick="onClick(this)" alt="Image 50">
-        <img src="Gruppen/G-59.jpg" style="width:100%" onclick="onClick(this)" alt="Image 51">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-58.jpg" style="width:100%" onclick="onClick(this)" alt="Image 52">
-        <img src="Gruppen/G-57.jpg" style="width:100%" onclick="onClick(this)" alt="Image 53">
-        <img src="Gruppen/G-56.jpg" style="width:100%" onclick="onClick(this)" alt="Image 54">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/G-55.jpg" style="width:100%" onclick="onClick(this)" alt="Image 55">
-        <img src="Gruppen/G-56.jpg" style="width:100%" onclick="onClick(this)" alt="Image 56">
-        <img src="Gruppen/G-57.jpg" style="width:100%" onclick="onClick(this)" alt="Image 57">
-    </div>
 
-    <!--Hier sind dann die großen-->
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-11.jpg" style="width:100%" onclick="onClick(this)" alt="Image 58">
-        <img src="Gruppen/AG-12.jpg" style="width:100%" onclick="onClick(this)" alt="Image 59">
-        <img src="Gruppen/AG-30.jpg" style="width:100%" onclick="onClick(this)" alt="Image 60">
-    </div>
-
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-31.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-32.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-33.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-34.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-35.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-42.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-43.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-47.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-51.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-52.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-53.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-54.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-64.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-65.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-66.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-67.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-69.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-70.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
-    <div class="w3-quarter">
-        <img src="Gruppen/AG-71.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-        <img src="Gruppen/AG-72.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-        <img src="Gruppen/AG-74.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-    </div>
 </div>
 <div id="modal01" class="w3-modal">
   <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="w3_close()">&times;</span>
