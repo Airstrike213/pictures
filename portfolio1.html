@@ -48,7 +48,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         captionText.innerHTML = element.alt;
 
         downloadButton.href = element.src; // Add this line
-        
+
         // Close the modal when clicking outside the image
         modal.onclick = function () {
             modal.style.display = "none";
@@ -122,12 +122,12 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
 
 </div>
-<div id="modal01" class="w3-modal">
-  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="w3_close()">&times;</span>
-  <div id="modal-content" class="w3-modal-content w3-animate-zoom">
-    <img id="img01" style="width:100%">
+<div id="modal01" class="w3-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="w3_close()" style="position: absolute; top: 0; right: 0; margin: 8px; font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; cursor: pointer;">&times;</span>
+  <div id="modal-content" class="w3-modal-content w3-animate-zoom" style="max-width: 600px; margin: auto; position: relative;">
+    <img id="img01" style="width: 100%;">
     <div id="caption" class="w3-center"></div>
-    <a href="#" id="downloadButton" class="w3-button w3-black w3-margin-bottom" download>Download</a>
+    <a href="#" id="downloadButton" class="w3-button w3-black w3-margin-bottom" download style="display: block; margin: 10px auto; padding: 10px 20px; background-color: #333; color: #fff; text-align: center; text-decoration: none; cursor: pointer;">Download</a>
   </div>
 </div>
 </body>
