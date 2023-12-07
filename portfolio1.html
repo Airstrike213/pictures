@@ -27,14 +27,28 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         }
         
         function onClick(element) {
+    // Open the modal
+    document.getElementById("modal01").style.display = "block";
+    // Set the source of the clicked image to the modal image
+    document.getElementById("img01").src = element.src;
+    // Set the alt text of the clicked image to the modal caption
+    document.getElementById("caption").innerHTML = element.alt;
+    // Set the href attribute of the download button to the source of the clicked image
+    document.getElementById("downloadButton").href = element.src;
+        }
+
+        function onClick(element) {
         var modal = document.getElementById("modal01");
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
+        var downloadButton = document.getElementById("downloadButton"); // Add this line
 
         modal.style.display = "block";
         modalImg.src = element.src;
         captionText.innerHTML = element.alt;
 
+        downloadButton.href = element.src; // Add this line
+        
         // Close the modal when clicking outside the image
         modal.onclick = function () {
             modal.style.display = "none";

@@ -30,11 +30,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         var modal = document.getElementById("modal01");
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
+        var downloadButton = document.getElementById("downloadButton"); // Add this line
 
         modal.style.display = "block";
         modalImg.src = element.src;
         captionText.innerHTML = element.alt;
 
+        downloadButton.href = element.src; // Add this line
+        
         // Close the modal when clicking outside the image
         modal.onclick = function () {
             modal.style.display = "none";
