@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Hochzeitsbilder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="StyleSheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+</head>
+<body class="w3-light-grey">
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+        }
+        
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+        }
+        
+        function onClick(element) {
+        var modal = document.getElementById("modal01");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var downloadButton = document.getElementById("downloadButton"); // Add this line
+
+        modal.style.display = "block";
+        modalImg.src = element.src;
+        captionText.innerHTML = element.alt;
+
+        downloadButton.href = element.src; // Add this line
+        
+        // Close the modal when clicking outside the image
+        modal.onclick = function () {
+            modal.style.display = "none";
+        };
+    }
+        </script>
+        
+    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Ronjas Und Kelvins Hochzeitsseite</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+    <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+      <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Schließen</a> 
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Startseite</a>
+      <a href="portfolio1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 1</a>
+      <a href="portfolio2.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 2</a>
+      <a href="portfolio3.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Hochkant Gruppen Fotos</a>
+      <a href="portfolio4.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">xxxx</a>
+    </nav>
+  
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-row w3-grayscale-min">
+
+    
+<div id="gallery" class="w3-row-padding">
+    <!-- Images will be dynamically added here -->
+  </div>
+  
+  <div id="modal01" class="w3-modal">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="w3_close()">&times;</span>
+    <div id="modal-content" class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%">
+      <div id="caption" class="w3-center"></div>
+      <a href="#" id="downloadButton" class="w3-button w3-black w3-margin-bottom" download>Download</a>
+    </div>
+  </div>
+  
+  <!-- JavaScript -->
+  
+  <script>
+  function populateGallery() {
+    var gallery = document.getElementById("gallery");
+  
+    // List all images in the "Gruppen" folder
+    var imageFolder = "Party\groß";
+    var imageFiles = ["GPA-13.jpg", "GPA-14.jpg", "GPA-15.jpg", "GPA-157.jpg", "GPA-158.jpg", "GPA-161.jpg", "GPA-162.jpg", "GPA-165.jpg", "GPA-17.jpg", "GPA-172.jpg", "GPA-173.jpg", "GPA-174.jpg", "GPA-175.jpg", "GPA-176.jpg", "GPA-178.jpg", "GPA-179.jpg", "GPA-180.jpg", "GPA-181.jpg", "GPA-182.jpg", "GPA-183.jpg", "GPA-184.jpg", "GPA-187.jpg", "GPA-188.jpg", "GPA-189.jpg", "GPA-190.jpg", "GPA-191.jpg", "GPA-192.jpg", "GPA-21.jpg", "GPA-22.jpg", "GPA-23.jpg", "GPA-230.jpg", "GPA-231.jpg", "GPA-232.jpg", "GPA-233.jpg", "GPA-234.jpg", "GPA-235.jpg", "GPA-236.jpg", "GPA-237.jpg", "GPA-238.jpg", "GPA-239.jpg", "GPA-24.jpg", "GPA-241.jpg", "GPA-242.jpg", "GPA-243.jpg", "GPA-244.jpg", "GPA-245.jpg", "GPA-246.jpg", "GPA-247.jpg", "GPA-248.jpg", "GPA-249.jpg", "GPA-250.jpg", "GPA-251.jpg", "GPA-252.jpg", "GPA-253.jpg", "GPA-254.jpg", "GPA-255.jpg", "GPA-256.jpg", "GPA-257.jpg", "GPA-258.jpg", "GPA-26.jpg", "GPA-261.jpg", "GPA-262.jpg", "GPA-263.jpg", "GPA-265.jpg", "GPA-267.jpg", "GPA-268.jpg", "GPA-269.jpg", "GPA-27.jpg", "GPA-270.jpg", "GPA-271.jpg", "GPA-272.jpg", "GPA-273.jpg", "GPA-274.jpg", "GPA-275.jpg", "GPA-278.jpg", "GPA-279.jpg", "GPA-28.jpg", "GPA-280.jpg", "GPA-281.jpg", "GPA-282.jpg", "GPA-283.jpg", "GPA-287.jpg", "GPA-289.jpg", "GPA-29.jpg", "GPA-292.jpg", "GPA-293.jpg", "GPA-296.jpg", "GPA-298.jpg", "GPA-299.jpg", "GPA-30.jpg", "GPA-302.jpg", "GPA-303.jpg", "GPA-304.jpg", "GPA-305.jpg", "GPA-306.jpg", "GPA-307.jpg", "GPA-31.jpg", "GPA-310.jpg", "GPA-311.jpg", "GPA-320.jpg", "GPA-323.jpg", "GPA-324.jpg", "GPA-325.jpg", "GPA-326.jpg", "GPA-328.jpg", "GPA-329.jpg", "GPA-33.jpg", "GPA-330.jpg", "GPA-331.jpg", "GPA-332.jpg", "GPA-333.jpg", "GPA-336.jpg", "GPA-337.jpg", "GPA-338.jpg", "GPA-339.jpg", "GPA-34.jpg", "GPA-340.jpg", "GPA-342.jpg", "GPA-343.jpg", "GPA-344.jpg", "GPA-345.jpg", "GPA-346.jpg", "GPA-347.jpg", "GPA-348.jpg", "GPA-349.jpg", "GPA-35.jpg", "GPA-350.jpg", "GPA-351.jpg", "GPA-352.jpg", "GPA-353.jpg", "GPA-354.jpg", "GPA-355.jpg", "GPA-356.jpg", "GPA-357.jpg", "GPA-358.jpg", "GPA-359.jpg", "GPA-36.jpg", "GPA-360.jpg", "GPA-361.jpg", "GPA-362.jpg", "GPA-363.jpg", "GPA-364.jpg", "GPA-365.jpg", "GPA-37.jpg", "GPA-370.jpg", "GPA-371.jpg", "GPA-372.jpg", "GPA-39.jpg", "GPA-4.jpg", "GPA-42.jpg", "GPA-43.jpg", "GPA-44.jpg", "GPA-49.jpg", "GPA-5.jpg", "GPA-50.jpg", "GPA-51.jpg", "GPA-53.jpg", "GPA-56.jpg", "GPA-57.jpg", "GPA-60.jpg", "GPA-61.jpg", "GPA-69.jpg", "GPA-70.jpg", "GPA-73.jpg", "GPA-74.jpg", "GPA-79.jpg", "GPA-80.jpg", "GPA-81.jpg"]; // Add more file names as needed
+  
+    // Dynamically add images to the gallery
+    for (var i = 0; i < imageFiles.length; i++) {
+      var imgSrc = imageFolder + imageFiles[i];
+  
+      var imgElement = document.createElement("img");
+      imgElement.src = imgSrc;
+      imgElement.style.width = "100%";
+      imgElement.alt = "Image " + (i + 22); // Assuming you want alt text like "Image 22", "Image 23", etc.
+  
+      // Add an onclick event to each image
+      imgElement.onclick = function() {
+        onClick(this);
+      };
+  
+      gallery.appendChild(imgElement);
+    }
+  }
+  
+  // Call the function to populate the gallery when the page loads
+  window.onload = function() {
+    populateGallery();
+  };
+  
+  function onClick(element) {
+    var modal = document.getElementById("modal01");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    var downloadButton = document.getElementById("downloadButton");
+  
+    modal.style.display = "block";
+    modalImg.src = element.src;
+    captionText.innerHTML = element.alt;
+  
+    // Set the href attribute of the download button to the source of the clicked image
+    downloadButton.href = element.src;
+  }
+  
+  function w3_close() {
+    document.getElementById("modal01").style.display = "none";
+  }
+  </script>
+  
+</body>
+</html>
+<!--test-->
