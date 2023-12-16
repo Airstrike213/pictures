@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-.w3-quarter"> img{margin-bottom: -6px; cursor: pointer}
-.w3-quarter"> img:hover{opacity: 0.6; transition: 0.3s}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 </head>
@@ -50,76 +50,86 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </header>
     <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
-      <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Schließen</a> 
-      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Startseite</a>
-      <a href="portfolio1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 1</a>
-      <a href="portfolio2.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 2</a>
-      <a href="portfolio3.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Hochkant Gruppen Fotos</a>
-      <a href="portfolio4.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">xxxx</a>
-    </nav>
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Schließen</a> 
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Startseite</a>
+        <a href="portfolio1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 1</a>
+        <a href="portfolio2.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Grupen Fotos 2</a>
+        <a href="portfolio3.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Hochkant Gruppen Fotos</a>
+        <a href="portfolio4.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Feier 1</a>
+        <a href="portfolio5.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Feier 2</a>
+        <a href="portfolio7.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Feier 3</a>
+        <a href="portfolio6.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Feier 4</a>
+      </nav>
   
   <!-- Overlay effect when opening sidebar on small screens -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 <div class="w3-row w3-grayscale-min">
 
-    <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+    
+<div id="gallery" class="w3-row-padding">
+    <!-- Images will be dynamically added here -->
+  </div>
+  
+  <div id="modal01" class="w3-modal">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="w3_close()">&times;</span>
+    <div id="modal-content" class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%">
+      <div id="caption" class="w3-center"></div>
+      <a href="#" id="downloadButton" class="w3-button w3-black w3-margin-bottom" download>Download</a>
     </div>
-
-    <div class="w3-quarter">">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 25">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 26">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 27">
   </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 28">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 29">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 30">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 31">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 32">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 33">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 34">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 35">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 36">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 37">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 38">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 39">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 40">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 41">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 42">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 43">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 44">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 45">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 46">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 47">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 48">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 49">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 50">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 51">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 52">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 53">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 54">
-  </div>
-  <div class="w3-quarter">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 55">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 56">
-      <img src="replace" style="width:100%" onclick="onClick(this)" alt="Image 57">
-  </div>
+  
+  <!-- JavaScript -->
+  
+  <script>
+  function populateGallery() {
+    var gallery = document.getElementById("gallery");
+  
+    // List all images in the "Gruppen" folder
+    var imageFolder = "Party/groß";
+    var imageFiles = ["GPA-250.jpg", "GPA-251.jpg", "GPA-252.jpg", "GPA-253.jpg", "GPA-254.jpg", "GPA-255.jpg", "GPA-256.jpg", "GPA-257.jpg", "GPA-258.jpg", "GPA-26.jpg", "GPA-261.jpg", "GPA-262.jpg", "GPA-263.jpg", "GPA-265.jpg", "GPA-267.jpg", "GPA-268.jpg", "GPA-269.jpg", "GPA-27.jpg", "GPA-270.jpg", "GPA-271.jpg", "GPA-272.jpg", "GPA-273.jpg", "GPA-274.jpg", "GPA-275.jpg", "GPA-278.jpg", "GPA-279.jpg", "GPA-28.jpg", "GPA-280.jpg"]; // Add more file names as needed
+  
+    // Dynamically add images to the gallery
+    for (var i = 0; i < imageFiles.length; i++) {
+      var imgSrc = imageFolder + "/" + imageFiles[i];
+  
+      var imgElement = document.createElement("img");
+      imgElement.src = imgSrc;
+      imgElement.style.width = "25%";
+      imgElement.alt = "Image " + (i + 22); // Assuming you want alt text like "Image 22", "Image 23", etc.
+  
+      // Add an onclick event to each image
+      imgElement.onclick = function() {
+        onClick(this);
+      };
+  
+      gallery.appendChild(imgElement);
+    }
+  }
+  
+  // Call the function to populate the gallery when the page loads
+  window.onload = function() {
+    populateGallery();
+  };
+  
+  function onClick(element) {
+    var modal = document.getElementById("modal01");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    var downloadButton = document.getElementById("downloadButton");
+  
+    modal.style.display = "block";
+    modalImg.src = element.src;
+    captionText.innerHTML = element.alt;
+  
+    // Set the href attribute of the download button to the source of the clicked image
+    downloadButton.href = element.src;
+  }
+  
+  function w3_close() {
+    document.getElementById("modal01").style.display = "none";
+  }
+  </script>
   
 </body>
 </html>
