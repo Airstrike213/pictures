@@ -13,7 +13,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 </head>
-<body class="w3-light-grey" id="test">
+<body class="w3-light-grey">
     <script>
         // Script to open and close sidebar
         function w3_open() {
@@ -26,29 +26,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           document.getElementById("myOverlay").style.display = "none";
         }
         
-        function onClick(element) {
-        var modal = document.getElementById("modal01");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        var downloadButton = document.getElementById("downloadButton"); // Add this line
-
-        modal.style.display = "block";
-        modalImg.src = element.src;
-        captionText.innerHTML = element.alt;
-
-        downloadButton.href = element.src; // Add this line
-        
-        // Close the modal when clicking outside the image
-        modal.onclick = function () {
-            modal.style.display = "none";
-        };
-      }
-        
         </script>
         
-    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-        <span class="w3-left w3-padding">Ronjas Und Kelvins Hochzeitsseite</span>
-        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+        <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+          <span class="w3-left w3-padding">Ronjas Und Kelvins Hochzeitsseite</span>
+          <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </header>
 <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
   <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Schließen</a> 
@@ -83,79 +65,73 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 <div class="w3-row w3-grayscale-min">
 
-    <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+    
+<div id="gallery" class="w3-row-padding">
+    <!-- Images will be dynamically added here -->
+  </div>
+</div>
+  <div id="modal01" class="w3-modal">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="w3_close()">&times;</span>
+    <div id="modal-content" class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%">
+      <div id="caption" class="w3-center"></div>
+      <a href="#" id="downloadButton" class="w3-button w3-black w3-margin-bottom" download>Download</a>
     </div>
-
-<!--Hier sind dann die großen-->
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-11.jpg" style="width:100%" onclick="onClick(this)" alt="Image 58">
-  <img src="Hochzeitsbilder/Gruppen/AG-12.jpg" style="width:100%" onclick="onClick(this)" alt="Image 59">
-  <img src="Hochzeitsbilder/Gruppen/AG-30.jpg" style="width:100%" onclick="onClick(this)" alt="Image 60">
-</div>
-
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-31.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-32.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-33.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-34.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-35.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-42.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-43.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-47.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-51.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-52.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-53.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-54.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-64.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-65.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-66.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-67.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-69.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-70.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
-<div class="w3-quarter">
-  <img src="Hochzeitsbilder/Gruppen/AG-71.jpg" style="width:100%" onclick="onClick(this)" alt="Image 61">
-  <img src="Hochzeitsbilder/Gruppen/AG-72.jpg" style="width:100%" onclick="onClick(this)" alt="Image 62">
-  <img src="Hochzeitsbilder/Gruppen/AG-74.jpg" style="width:100%" onclick="onClick(this)" alt="Image 63">
-</div>
+  </div>
   
-
-
+  <!-- JavaScript -->
+  
   <script>
-    const imageContainer = document.getElementById('image-container');
-
-    // GitHub repository information
-    const owner = 'Airstrike213';
-    const repo = 'pictures';
-    const path = 'Hochzeitsbilder'; // Path to your images folder
-
-    // Fetch the list of files from the specified folder using the GitHub API
-    fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
-        .then(response => response.json())
-        .then(data => {
-            // Filter only files from the response
-            const imageFiles = data.filter(item => item.type === 'file');
-
-            // Loop through the image files and create image elements
-            imageFiles.forEach(imageFile => {
-                const imgElement = document.createElement('img');
-                imgElement.src = imageFile.download_url;
-                imgElement.alt = 'Image';
-                imageContainer.appendChild(imgElement);
-            });
-        })
-        .catch(error => console.error('Error fetching image list:', error));
-</script>
-
+  function populateGallery() {
+    var gallery = document.getElementById("gallery");
+  
+    // List all images in the "Gruppen" folder
+    var imageFolder = "Hochzeitsbilder/Gruppen/";
+    var imageFiles = ["AG-11.jpg","AG-12.jpg","AG-30.jpg","AG-31.jpg","AG-32.jpg","AG-33.jpg","AG-34.jpg","AG-35.jpg","AG-42.jpg","AG-43.jpg","AG-47.jpg","AG-51.jpg","AG-52.jpg","AG-53.jpg","AG-54.jpg","AG-64.jpg","AG-65.jpg","AG-66.jpg","AG-67.jpg","AG-69.jpg","AG-70.jpg","AG-71.jpg","AG-72.jpg","AG-74.jpg"
+]; // Add more file names as needed
+  
+    // Dynamically add images to the gallery
+    for (var i = 0; i < imageFiles.length; i++) {
+      var imgSrc = imageFolder + "/" + imageFiles[i];
+  
+      var imgElement = document.createElement("img");
+      imgElement.src = imgSrc;
+      imgElement.style.width = "25%";
+      imgElement.alt = "Image " + (i + 22); // Assuming you want alt text like "Image 22", "Image 23", etc.
+  
+      // Add an onclick event to each image
+      imgElement.onclick = function() {
+        onClick(this);
+      };
+  
+      gallery.appendChild(imgElement);
+    }
+  }
+  
+  // Call the function to populate the gallery when the page loads
+  window.onload = function() {
+    populateGallery();
+  };
+  
+  function onClick(element) {
+    var modal = document.getElementById("modal01");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    var downloadButton = document.getElementById("downloadButton");
+  
+    modal.style.display = "block";
+    modalImg.src = element.src;
+    captionText.innerHTML = element.alt;
+  
+    // Set the href attribute of the download button to the source of the clicked image
+    downloadButton.href = element.src;
+  }
+  
+  function w3_close() {
+    document.getElementById("modal01").style.display = "none";
+  }
+  </script>
+  
 </body>
 </html>
+<!--test-->
